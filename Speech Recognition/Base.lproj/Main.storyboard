@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Speech_Recognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zRL-Sk-Gj3">
+                                <rect key="frame" x="15" y="115" width="345" height="296"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="296" id="Ojf-XJ-0Mg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkj-7L-Oxo">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Speech To Text" id="J9r-6I-NNA"/>
+                                </items>
+                            </navigationBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="o9T-LW-3kA">
+                                <rect key="frame" x="60.5" y="79" width="254" height="29"/>
+                                <segments>
+                                    <segment title="English"/>
+                                    <segment title="Spanish"/>
+                                    <segment title="Portuguese"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="CzM-dh-1Y0"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpX-89-THE">
+                                <rect key="frame" x="140" y="421" width="95" height="43"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="kHd-an-YeQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v9O-4t-HQ7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wpX-89-THE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4zm-t7-XpF"/>
+                            <constraint firstItem="zRL-Sk-Gj3" firstAttribute="top" secondItem="o9T-LW-3kA" secondAttribute="bottom" constant="8" symbolic="YES" id="DAq-XM-iQs"/>
+                            <constraint firstItem="zRL-Sk-Gj3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="I0i-iQ-MWh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wpX-89-THE" secondAttribute="bottom" constant="203" id="NTS-Cg-z6Z"/>
+                            <constraint firstItem="wpX-89-THE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="Ocb-vR-LLN"/>
+                            <constraint firstItem="zRL-Sk-Gj3" firstAttribute="centerX" secondItem="gkj-7L-Oxo" secondAttribute="centerX" id="WOk-54-Mc4"/>
+                            <constraint firstItem="wpX-89-THE" firstAttribute="top" secondItem="zRL-Sk-Gj3" secondAttribute="bottom" constant="10" id="Xhn-67-Q19"/>
+                            <constraint firstItem="gkj-7L-Oxo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="anV-jp-LV5"/>
+                            <constraint firstItem="wpX-89-THE" firstAttribute="centerX" secondItem="o9T-LW-3kA" secondAttribute="centerX" id="cJf-Sq-J8m"/>
+                            <constraint firstItem="wpX-89-THE" firstAttribute="centerX" secondItem="gkj-7L-Oxo" secondAttribute="centerX" id="dke-0P-b9t"/>
+                            <constraint firstItem="wpX-89-THE" firstAttribute="centerX" secondItem="zRL-Sk-Gj3" secondAttribute="centerX" id="rvP-sr-vKs"/>
+                            <constraint firstItem="gkj-7L-Oxo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wD1-Io-C1B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="record" destination="wpX-89-THE" id="I15-jo-lCX"/>
+                        <outlet property="segment" destination="o9T-LW-3kA" id="7Zc-Gw-40J"/>
+                        <outlet property="textView" destination="zRL-Sk-Gj3" id="Wl6-lJ-ISa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
